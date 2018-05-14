@@ -1,0 +1,224 @@
+ul.level,
+ul.clef {
+  position: absolute;
+}
+
+.button__mode {
+  visibility: hidden;
+  position: relative;
+  border: 1px solid #777;
+  background-color: $bgbutton;
+  letter-spacing: 1px;
+  font-size: 85%;
+  width: 6.3rem;
+  margin-bottom: 1.2rem;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  position: relative;
+  z-index: 10;
+
+  &.selected {
+    color: #fafafa;
+    background-color: steelblue;
+  }
+
+  @include atSmall {
+    width: 6.2rem;
+    height: 2rem;
+    line-height: 1.8rem;
+  }
+
+  @include atMedium {
+    display: block;
+    visibility: visible !important;
+    font-size: 105%;
+    width: 8rem;
+    height: 2.7rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.7rem;
+  }
+}
+
+.button__mode--level {
+  top: -16rem;
+
+  @include atSmall {
+    top: -18.6rem;
+    left: 0.2rem;
+  }
+
+  @include atMedium {
+    top: -18rem;
+    left: -1rem;
+  }
+}
+
+.button__mode--clef {
+  top: -6rem;
+
+  @include atSmall {
+    top: -18.5rem;
+    left: 8.2rem;
+  }
+
+  @include atMedium {
+    top: -18rem;
+    left: 8.5rem;
+  }
+}
+
+.button__info,
+.button__back {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #777;
+  text-align: center;
+  background-color: rgba(180, 191, 191, 0.9);
+  font-size: 90%;
+  width: 7.8rem;
+  letter-spacing: 1px;
+  line-height: 1.7rem;
+  z-index: 10;
+
+  @include atSmall {
+    visibility: visible !important;
+    transform: none;
+    position: static;
+    display: block;
+    background: steelblue;
+    border: 2px solid rgba(180, 191, 191, 0.9);
+    font-size: 90%;
+    font-weight: 300;
+    width: 9rem;
+    margin-left: 1.2rem;
+  }
+
+  @include atMedium {
+    font-size: 100%;
+    width: 11rem;
+    letter-spacing: 2px;
+    padding: 3px;
+    margin-top: 2px;
+    margin-left: 0;
+  }
+}
+
+.button__info.is-showing {
+  display: block;
+  transition: none;
+}
+
+.button__back {
+  font-weight: 300;
+  display: block;
+  width: 13rem;
+  background: steelblue;
+  border: 2px solid rgba(180, 191, 191, 0.9);
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+  left: 6%;
+  top: 0.4rem;
+  margin: 0;
+
+  @include atSmall {
+    font-size: 90%;
+    width: 13rem;
+    left: 4%;
+    top: 0.8rem;
+  }
+  @include atMedium {
+    font-size: 100%;
+    width: 10rem;
+    top: 0.6rem;
+    padding-top: 3px;
+  }
+}
+
+.button__email {
+  position: absolute;
+  background: steelblue;
+  border: 2px solid rgba(180, 191, 191, 0.9);
+  font-size: 90%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 2px 0;
+  width: 10rem;
+  top: 4rem;
+  right: 6%;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @include atSmall {
+    font-size: 90%;
+    width: 10rem;
+    right: 4%;
+    top: 0.8rem;
+  }
+  @include atMedium {
+    right: 4%;
+    top: 0.6rem;
+    line-height: 1rem;
+    padding-top: 3px;
+    font-size: 100%;
+    width: 7.2rem;
+  }
+}
+
+.button__back.link {
+  color: #fff;
+}
+
+.link {
+  color: #333;
+
+  @include atSmall {
+    color: #fff;
+  }
+}
+
+.hamburger,
+.cross {
+  position: absolute;
+  border: none;
+  background-color: #e9ebee;
+  cursor: pointer;
+
+  @include atMedium {
+    display: none;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  left: 1rem;
+  top: 4.6rem;
+
+  @include atSmall {
+    left: 1rem;
+    top: 5rem;
+  }
+}
+
+.cross {
+  display: none;
+  outline: none;
+  padding: 0;
+  left: 1rem;
+  top: 4.6rem;
+
+  @include atSmall {
+    left: 1rem;
+    top: 5rem;
+  }
+  @include atMedium {
+    display: none !important;
+  }
+}

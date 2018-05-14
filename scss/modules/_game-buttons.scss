@@ -1,0 +1,92 @@
+.note-container,
+.register-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+
+  @include atSmall {
+    margin-top: 2rem;
+  }
+
+  @include atMedium {
+    margin-top: 0;
+  }
+}
+
+.note-buttons,
+.register-buttons {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  width: 355px;
+
+  @include atSmall {
+    width: 480px;
+  }
+  @include atMedium {
+    width: 570px;
+  }
+}
+
+.correctButton {
+  color: 'fafafa';
+  background-color: steelblue;
+}
+
+.note-buttons > li,
+.register-buttons > li {
+  border: 1px solid #777;
+  border-radius: 12%;
+  height: 4.2rem;
+  width: 4.2rem;
+  text-align: center;
+  line-height: 4.2rem;
+  font-size: 165%;
+  // margin: 4rem .5rem 5rem .5rem;
+
+  &.correct {
+    color: #fafafa;
+    background-color: steelblue;
+    font-weight: normal;
+    font-size: 155%;
+
+    @include atSmall {
+      font-size: 240%;
+    }
+
+    @include atMedium {
+      font-size: 250%;
+    }
+  }
+
+  @include atSmall {
+    height: 5.8rem;
+    width: 5.8rem;
+    line-height: 5.8rem;
+    font-size: 240%;
+    // margin: 4rem .5rem 5rem .5rem;
+  }
+
+  @include atMedium {
+    height: 6.8rem;
+    width: 6.8rem;
+    line-height: 6.8rem;
+    font-size: 250%;
+    // margin: 0 .5rem 3rem .5rem;
+  }
+}
+
+.task-text {
+  margin-left: 4px;
+  font-weight: normal;
+  font-size: 110%;
+
+  @include atSmall {
+    margin-left: 0;
+    font-size: 135%;
+  }
+
+  @include atMedium {
+    font-size: 140%;
+  }
+}

@@ -1,0 +1,155 @@
+//   @include atMedium {
+//     display: block;
+//     width: 98%;
+//     position: absolute;
+//     bottom: 15vh;
+//     left: 1%;
+//     cursor: pointer;
+//   }
+
+//   @include atLarge {
+//     width: 97%;
+//     bottom: 15vh;
+//     left: 1.5%;
+//   }
+// }
+
+.keyboard-keys {
+  display: none;
+
+  @include atMedium {
+    display: block;
+    display: flex;
+    width: 98%;
+    justify-content: center;
+  }
+}
+
+.octave {
+  display: block;
+  display: flex;
+  margin: 0 auto;
+  width: 20rem;
+  cursor: pointer;
+  z-index: 2;
+
+  @include atMedium {
+    display: none;
+  }
+}
+
+.key {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  // float: left;
+  cursor: pointer;
+}
+
+.white {
+  height: 120px;
+  width: 30px;
+  z-index: 1;
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0 0 4px 4px;
+  box-shadow: -1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset,
+    0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fefefe 30%, #fff 100%);
+
+  @include atMedium {
+    height: 90px;
+    width: 24px;
+    border-radius: 0 0 3px 3px;
+  }
+
+  @include atLarge {
+    height: 100px;
+  }
+}
+
+.white:active {
+  border-top: 1px solid #777;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1) inset,
+    -3px 3px 10px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(top, #fff 0%, #e9e9e9 100%);
+}
+
+.black {
+  height: 70px;
+  width: 20px;
+  margin: 0 14px 0 -8px;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2) inset,
+    0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #222 0%, #555 100%);
+
+  @include atMedium {
+    height: 55px;
+    width: 15px;
+    margin: 0 18px 0 -6px;
+  }
+
+  @include atLarge {
+    height: 60px;
+    margin: 0 17px 0 -7px;
+  }
+}
+
+.black:active {
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(left, #444 0%, #222 100%);
+}
+
+.c,
+.d,
+.e,
+.g,
+.a,
+.b {
+  margin: 0 0 0 -24px;
+
+  @include atLarge {
+    margin: 0 0 0 -24px;
+  }
+}
+
+@include atMedium {
+  .c {
+    margin: 0;
+  }
+}
+
+.task-text__keys {
+  display: none;
+
+  @include atMedium {
+    display: block;
+    margin: 35px 0 10px 0;
+    &.hide {
+      opacity: 0;
+    }
+  }
+}
+
+.task-text--one-octave {
+  &.hide {
+    opacity: 0;
+  }
+  position: relative;
+  top: 30px;
+
+  @include atSmall {
+    top: 35px;
+  }
+
+  @include atMedium {
+    display: none;
+  }
+}

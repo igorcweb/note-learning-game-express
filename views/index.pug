@@ -1,0 +1,163 @@
+extends layout
+block content
+  .game
+    .wrapper
+      header.header
+        a.button.button__info.link(href='info.html') Game Info
+        h1.title Note-Learning Game
+        h1.streak
+          | Streak:
+          span#streak 0
+      .content
+        img.notes(src='', alt='note')
+      .game-settings
+        ul.level
+          li#easy.button.button__mode.button__mode--level.selected Easy
+          li#medium.button.button__mode.button__mode--level Medium
+          li#hard.button.button__mode.button__mode--level Hard
+        ul.clef
+          li.button.button__mode.button__mode--clef.highlight.selected.treble Treble
+          li.button.button__mode.button__mode--clef.bass Bass
+          li.button.button__mode.button__mode--clef.both Both
+      button.hamburger
+        i.fa.fa-bars(aria-hidden='true')
+      button.cross
+        i.fa.fa-times(aria-hidden='true')
+      .note-container
+        div
+          h1.task-text.task1 Pick a Note:
+          ul.note-buttons
+            li.button(data-note='C') C
+            li.button(data-note='D') D
+            li.button(data-note='E') E
+            li.button(data-note='F') F
+            li.button(data-note='G') G
+            li.button(data-note='A') A
+            li.button(data-note='B') B
+          h1.task-text.task4.task-text--one-octave or a Key
+      div
+        ul.octave
+          li.key.white.c(data-key='c')
+          li.key.black.cs(data-key='cs')
+          li.key.white.d(data-key='d')
+          li.key.black.ds(data-key='ds')
+          li.key.white.e(data-key='e')
+          li.key.white.f(data-key='f')
+          li.key.black.fs(data-key='fs')
+          li.key.white.g(data-key='g')
+          li.key.black.gs(data-key='gs')
+          li.key.white.a(data-key='a')
+          li.key.black.as(data-key='as')
+          li.key.white.b(data-key='b')
+      .register-container
+        div
+          h1.task-text.task2 Pick a Register
+          ul.register-buttons
+            li.button(data-reg='1') 1
+            li.button(data-reg='2') 2
+            li.button(data-reg='3') 3
+            li.button(data-reg='4') 4
+            li.button(data-reg='5') 5
+            li.button(data-reg='6') 6
+            li.button(data-reg='7') 7
+          h1.task-text.task-text__keys.task3 or Pick a Key:
+      .keyboard-container
+        ul.keyboard-keys
+          li.key.white.a
+          li.key.black.as
+          li.key.white.b
+          li.key.white.c(data-key='c1')
+          li.key.black.cs(data-key='cs1')
+          li.key.white.d(data-key='d1')
+          li.key.black.ds(data-key='ds1')
+          li.key.white.e(data-key='e1')
+          li.key.white.f(data-key='f1')
+          li.key.black.fs(data-key='fs1')
+          li.key.white.g(data-key='g1')
+          li.key.black.gs(data-key='gs1')
+          li.key.white.a(data-key='a1')
+          li.key.black.as(data-key='as1')
+          li.key.white.b(data-key='b1')
+          li.key.white.c(data-key='c2')
+          li.key.black.cs(data-key='cs2')
+          li.key.white.d(data-key='d2')
+          li.key.black.ds(data-key='ds2')
+          li.key.white.e(data-key='e2')
+          li.key.white.f(data-key='f2')
+          li.key.black.fs(data-key='fs2')
+          li.key.white.g(data-key='g2')
+          li.key.black.gs(data-key='gs2')
+          li.key.white.a(data-key='a2')
+          li.key.black.as(data-key='as2')
+          li.key.white.b(data-key='b2')
+          li.key.white.c(data-key='c3')
+          li.key.black.cs(data-key='cs3')
+          li.key.white.d(data-key='d3')
+          li.key.black.ds(data-key='ds3')
+          li.key.white.e(data-key='e3')
+          li.key.white.f(data-key='f3')
+          li.key.black.fs(data-key='fs3')
+          li.key.white.g(data-key='g3')
+          li.key.black.gs(data-key='gs3')
+          li.key.white.a(data-key='a3')
+          li.key.black.as(data-key='as3')
+          li.key.white.b(data-key='b3')
+          li.key.white.c(data-key='c4')
+          li.key.black.cs(data-key='cs4')
+          li.key.white.d(data-key='d4')
+          li.key.black.ds(data-key='ds4')
+          li.key.white.e(data-key='e4')
+          li.key.white.f(data-key='f4')
+          li.key.black.fs(data-key='fs4')
+          li.key.white.g(data-key='g4')
+          li.key.black.gs(data-key='gs4')
+          li.key.white.a(data-key='a4')
+          li.key.black.as(data-key='as4')
+          li.key.white.b(data-key='b4')
+          li.key.white.c(data-key='c5')
+          li.key.black.cs(data-key='cs5')
+          li.key.white.d(data-key='d5')
+          li.key.black.ds(data-key='ds5')
+          li.key.white.e(data-key='e5')
+          li.key.white.f(data-key='f5')
+          li.key.black.fs(data-key='fs5')
+          li.key.white.g(data-key='g5')
+          li.key.black.gs(data-key='gs5')
+          li.key.white.a(data-key='a5')
+          li.key.black.as(data-key='as5')
+          li.key.white.b(data-key='b5')
+          li.key.white.c(data-key='c6')
+          li.key.black.cs(data-key='cs6')
+          li.key.white.d(data-key='d6')
+          li.key.black.ds(data-key='ds6')
+          li.key.white.e(data-key='e6')
+          li.key.white.f(data-key='f6')
+          li.key.black.fs(data-key='fs6')
+          li.key.white.g(data-key='g6')
+          li.key.black.gs(data-key='gs6')
+          li.key.white.a(data-key='a6')
+          li.key.black.as(data-key='as6')
+          li.key.white.b(data-key='b6')
+          li.key.white.c(data-key='c7')
+          li.key.black.cs(data-key='cs7')
+          li.key.white.d(data-key='d7')
+          li.key.black.ds(data-key='ds7')
+          li.key.white.e(data-key='e7')
+          li.key.white.f(data-key='f7')
+          li.key.black.fs(data-key='fs7')
+          li.key.white.g(data-key='g7')
+          li.key.black.gs(data-key='gs7')
+          li.key.white.a(data-key='a7')
+          li.key.black.as(data-key='as7')
+          li.key.white.b(data-key='b7')
+          li.key.white.c8
+      footer
+        p.footer
+          | Copyright ©
+          span.year
+          |  IC
+    // wrapper
+    .warning-message
+      h3
+        | This game is only viewable in portrait mode on your device
+    script(src='index.js')
