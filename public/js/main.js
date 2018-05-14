@@ -287,7 +287,8 @@
 
   noteButtons.on('click', 'li.button', function() {
     let clickedNote = $(this)[0];
-    if (clickedNote.dataset.note === note[0]) {
+    console.log(clickedNote.dataset.note);
+    if (clickedNote.dataset.note === note[0].toLowerCase()) {
       answeredNote = true;
       $(this).css({
         color: '#fafafa',
@@ -401,12 +402,13 @@
         $('.task3').css('color', '#333');
       }, 200);
       scoreDisplay.text(' ' + score);
+      console.log(note);
     }
   });
 
   function buttonWin() {
     $('.note-buttons > li.button').each(function() {
-      if ($(this)[0].dataset.note === note[0].toUpperCase()) {
+      if ($(this)[0].dataset.note === note[0]) {
         $(this).css({ color: '#fafafa', backgroundColor: 'steelblue' });
         $(this)
           .siblings()
