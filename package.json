@@ -7,7 +7,7 @@
   "scripts": {
     "start-server": "nodemon index.js --exec babel-node --presets env",
     "build-css": "node-sass -o public/css scss/main.scss -w",
-    "start": "npm-run-all -p start-server build-css"
+    "start": "npm-run-all -p build-css start-server"
   },
   "dependencies": {
     "express": "^4.16.3",

@@ -23,6 +23,7 @@
     hamburger = $('.hamburger'),
     cross = $('.cross'),
     fullKeyboard = $('ul.keyboard-keys'),
+    octave = $('ul.octave'),
     level = 'easy',
     clef = 'treble',
     answeredNote = false,
@@ -45,7 +46,7 @@
       .css({
         opacity: '1',
         color: 'inherit',
-        'background-color': 'rgba(180, 191, 191, .9)'
+        'background-color': 'rgba(180, 191, 191, 0.9)'
       });
     $('.task1').text('Pick a Note:');
     $('.task2').text('Pick a Register:');
@@ -287,7 +288,6 @@
 
   noteButtons.on('click', 'li.button', function() {
     let clickedNote = $(this)[0];
-    console.log(clickedNote.dataset.note);
     if (clickedNote.dataset.note === note[0].toLowerCase()) {
       answeredNote = true;
       $(this).css({
@@ -353,35 +353,26 @@
     $('.button__info').removeClass('isShowing');
   });
 
-  //small keyboard for small screens
-  // $('.one-octave > img').each(function() {
-  //   $(this).on('click', function() {
-  //     if ($(this).attr('alt') === note[0]) {
-  //       noteButton.each(function() {
-  //         if ($(this).context.innerText === note[0]) {
-  //           $(this).css({
-  //             color: '#fafafa',
-  //             'background-color': 'steelblue'
-  //           });
-  //           $(this)
-  //             .siblings()
-  //             .hide();
-  //           clefButtons.addClass('note');
-  //           $('.task1').text('Correct!');
-  //           $('.task4').text('Correct!');
-  //           win();
-  //         }
-  //       });
-  //     } else {
-  //       $('.task4').text('');
-  //       setTimeout(function() {
-  //         $('.task4').text('Try Again!');
-  //       }, 200);
-  //       score = 0;
-  //       scoreDisplay.text(' ' + score);
-  //     }
-  //   });
-  // });
+  //Small Keyboard for Small Screens
+  octave.on('click', 'li', function() {
+    let clickedKey = $(this)[0];
+    note = note.toLowerCase();
+    if (clickedKey.dataset.key === note[0]) {
+      answeredNote = true;
+      noteButtonWin();
+      win();
+      $('.task4').text('Correct!');
+    } else {
+      score = 0;
+      $('.task4')
+        .text('Try Again!')
+        .css('color', '#e9ebee');
+      setTimeout(function() {
+        $('.task4').css('color', '#333');
+      }, 200);
+      scoreDisplay.text(' ' + score);
+    }
+  });
 
   //Full Keyboard for Large and Medium Screens
   fullKeyboard.on('click', 'li', function() {
@@ -402,11 +393,12 @@
         $('.task3').css('color', '#333');
       }, 200);
       scoreDisplay.text(' ' + score);
-      console.log(note);
     }
   });
 
-  function buttonWin() {
+  noteButtonWin();
+
+  function noteButtonWin() {
     $('.note-buttons > li.button').each(function() {
       if ($(this)[0].dataset.note === note[0]) {
         $(this).css({ color: '#fafafa', backgroundColor: 'steelblue' });
@@ -416,7 +408,11 @@
         $('.task1').text('Correct!');
       }
     });
+  }
 
+  function buttonWin() {
+    noteButtonWin();
+    //regButtonWin
     $('.register-buttons > li.button').each(function() {
       if ($(this)[0].dataset.reg === note[1]) {
         $(this).css({ color: '#fafafa', backgroundColor: 'steelblue' });
