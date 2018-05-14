@@ -91,4 +91,8 @@ div.warning-message {
     margin-top: 3rem;
     font-size: 75%;
   }
+
+  @include atLarge {
+    margin-top: 2rem;
+  }
 }

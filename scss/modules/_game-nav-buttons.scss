@@ -4,7 +4,8 @@ ul.clef {
 }
 
 .button__mode {
-  visibility: hidden;
+  margin-left: -20rem;
+  transition: margin-left 0.3s;
   position: relative;
   border: 1px solid #777;
   background-color: $bgbutton;
@@ -16,6 +17,10 @@ ul.clef {
   line-height: 2.1rem;
   position: relative;
   z-index: 10;
+
+  &.isShowing {
+    margin-left: 0;
+  }
 
   &.selected {
     color: #fafafa;
@@ -29,8 +34,7 @@ ul.clef {
   }
 
   @include atMedium {
-    display: block;
-    visibility: visible !important;
+    margin-left: 0;
     font-size: 105%;
     width: 8rem;
     height: 2.7rem;
@@ -69,7 +73,8 @@ ul.clef {
 
 .button__info,
 .button__back {
-  visibility: hidden;
+  //visibility: hidden;
+  margin-left: -30rem;
   display: block;
   position: absolute;
   top: 4.5rem;
@@ -84,8 +89,13 @@ ul.clef {
   line-height: 1.7rem;
   z-index: 10;
 
+  &.isShowing {
+    margin-left: 0;
+  }
+
   @include atSmall {
-    visibility: visible !important;
+    //visibility: visible !important;
+    margin-left: -2rem !important;
     transform: none;
     position: static;
     display: block;
@@ -94,16 +104,15 @@ ul.clef {
     font-size: 90%;
     font-weight: 300;
     width: 9rem;
-    margin-left: 1.2rem;
   }
 
   @include atMedium {
+    margin-left: 0 !important;
     font-size: 100%;
     width: 11rem;
     letter-spacing: 2px;
     padding: 3px;
     margin-top: 2px;
-    margin-left: 0;
   }
 }
 

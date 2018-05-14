@@ -340,15 +340,16 @@
   hamburger.on('click', function() {
     $(this).hide();
     cross.show();
-    $('.button__mode').css('visibility', 'visible');
-    $('.button__info').css('visibility', 'visible');
+    //$('.button__mode').css('visibility', 'visible');
+    $('.button__mode').addClass('isShowing');
+    $('.button__info').addClass('isShowing');
   });
 
   cross.on('click', function() {
     $(this).hide();
     hamburger.show();
-    $('.button__mode').css('visibility', 'hidden');
-    $('.button__info').css('visibility', 'hidden');
+    $('.button__mode').removeClass('isShowing');
+    $('.button__info').removeClass('isShowing');
   });
 
   //small keyboard for small screens
