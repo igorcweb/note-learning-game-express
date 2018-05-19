@@ -3,8 +3,7 @@
 
 # misc
 .DS_Store
-
-/dist
+yarn.lock
 
 
 # automatically generated css file

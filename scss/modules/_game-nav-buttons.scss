@@ -15,7 +15,6 @@ ul.clef {
   margin-bottom: 1.2rem;
   height: 2.1rem;
   line-height: 2.1rem;
-  position: relative;
   z-index: 10;
 
   &.isShowing {
@@ -31,9 +30,10 @@ ul.clef {
   }
 
   @include atSmall {
-    width: 6.2rem;
-    height: 2rem;
-    line-height: 1.8rem;
+    font-size: 90%;
+    width: 6.4rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
   }
 
   @include atMedium {
@@ -75,19 +75,20 @@ ul.clef {
 }
 
 .button__info {
+  color: #fafafa;
   margin-left: -40rem;
   display: block;
   position: absolute;
-  top: 4.5rem;
+  top: 4.6rem;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid #777;
   text-align: center;
   background-color: rgba(180, 191, 191, 0.9);
-  font-size: 90%;
+  font-size: 85%;
   width: 8.2rem;
   letter-spacing: 1px;
-  line-height: 2.2rem;
+  line-height: 1.8rem;
   z-index: 10;
 
   &.isShowing {
@@ -95,7 +96,7 @@ ul.clef {
   }
 
   @include atSmall {
-    //visibility: visible !important;
+    padding-top: 0.2rem;
     margin-left: -2rem !important;
     transform: none;
     position: static;
@@ -103,17 +104,18 @@ ul.clef {
     background: steelblue;
     border: 2px solid rgba(180, 191, 191, 0.9);
     font-size: 90%;
-    font-weight: 300;
     width: 9rem;
+    font-weight: 300;
   }
 
   @include atMedium {
     line-height: 1.7rem;
     margin-left: 0 !important;
     font-size: 100%;
-    width: 11rem;
+    font-weight: normal;
+    width: 10.5rem;
     letter-spacing: 2px;
-    padding: 3px;
+    padding-top: 0.4rem;
     margin-top: 2px;
   }
 }
@@ -124,6 +126,7 @@ ul.clef {
 }
 
 .button__back {
+  color: #fafafa;
   position: absolute;
   left: 4%;
   top: 0.6rem;
@@ -144,20 +147,22 @@ ul.clef {
   @include atMedium {
     top: 0.8rem;
     font-size: 100%;
-    width: 15rem;
+    font-weight: normal;
+    width: 15.5rem;
     padding-top: 3px;
   }
 }
 
 .button__email {
+  color: #fafafa;
   position: absolute;
   background: steelblue;
   border: 2px solid rgba(180, 191, 191, 0.9);
-  font-size: 90%;
+  font-size: 80%;
   font-weight: 300;
   letter-spacing: 1px;
   padding: 2px 0;
-  width: 10rem;
+  width: 9.5rem;
   top: 4.5rem;
   right: 6%;
   a {
@@ -173,16 +178,17 @@ ul.clef {
   }
   @include atMedium {
     right: 4%;
-    top: 0.9rem;
+    top: 0.8rem;
     line-height: 1rem;
     padding: 7px 0 6px 0;
     font-size: 100%;
-    width: 11rem;
+    font-weight: normal;
+    width: 11.5rem;
   }
 }
 
 .button__back.link {
-  color: #fff;
+  color: #fafafa;
 }
 
 .link {
@@ -222,6 +228,8 @@ ul.clef {
   display: none;
   outline: none;
   padding: 0;
+  font-size: 105%;
+  font-weight: 100;
   left: 1rem;
   top: 4.6rem;
 
