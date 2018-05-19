@@ -1,5 +1,6 @@
 .keyboard-keys {
   display: none;
+  margin-top: 0.5rem;
 
   @include atMedium {
     display: block;

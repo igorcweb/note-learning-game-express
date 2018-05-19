@@ -1,8 +1,6 @@
-.note-container,
-.register-container {
+.note-container {
   display: flex;
   justify-content: center;
-  margin-top: 6rem;
 
   @include atSmall {
     margin-top: 2rem;
@@ -14,15 +12,9 @@
 }
 
 .register-container {
-  margin-top: 4rem;
-
-  @include atSmall {
-    margin-top: 2rem;
-  }
-
-  @include atMedium {
-    margin-top: 0;
-  }
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .note-buttons,
@@ -100,4 +92,8 @@
   @include atMedium {
     font-size: 140%;
   }
+}
+
+.task-text.task1 {
+  padding-top: 0;
 }
