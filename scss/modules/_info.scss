@@ -1,0 +1,106 @@
+.info-wrapper {
+  max-width: 92%;
+  margin: -2.3rem auto;
+  background-color: #fff;
+  padding-top: 0;
+  color: #555;
+}
+
+header.info {
+  h1.title {
+    position: relative;
+    left: 8rem;
+
+    @include atSmall {
+      font-size: 125%;
+      position: relative;
+      left: 2rem;
+    }
+
+    @include atMedium {
+      font-size: 160%;
+    }
+
+    @include atLarge {
+      font-size: 170%;
+    }
+  }
+}
+
+article {
+  margin: 0 3%;
+  letter-spacing: 0.5px;
+  font-size: 105%;
+
+  h1 {
+    font-size: 130%;
+    color: steelblue;
+    padding-top: 1.5em;
+    margin: 2.3rem 0;
+  }
+}
+
+.treble-staff {
+  display: block;
+  width: 48%;
+  min-width: 350px;
+  float: right;
+  margin: -8px 0px 20px 20px;
+
+  @include atSmall {
+    margin-right: 7px;
+    min-width: 400px;
+  }
+}
+
+.bass-staff {
+  display: block;
+  float: right;
+  width: 48%;
+  min-width: 350px;
+  margin: 0 0px 20px 20px;
+
+  @include atSmall {
+    margin-right: 7px;
+    min-width: 400px;
+  }
+}
+
+.note-names {
+  display: block;
+  width: 11rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+
+  @include atSmall {
+    width: 12rem;
+  }
+
+  @include atMedium {
+    width: 14rem;
+  }
+}
+
+.keyboard-registers {
+  display: block;
+  width: 95%;
+  min-width: 350px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.staff-registers {
+  display: block;
+  width: 85%;
+  min-width: 350px;
+  margin: 3rem auto;
+  padding-bottom: 3rem;
+}
+
+.ledger-treble,
+.ledger-bass {
+  width: 75%;
+  min-width: 350px;
+  display: block;
+  margin: 0 auto;
+}

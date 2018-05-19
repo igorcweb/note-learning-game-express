@@ -341,7 +341,6 @@
   hamburger.on('click', function() {
     $(this).hide();
     cross.show();
-    //$('.button__mode').css('visibility', 'visible');
     $('.button__mode').addClass('isShowing');
     $('.button__info').addClass('isShowing');
   });
@@ -412,7 +411,6 @@
 
   function buttonWin() {
     noteButtonWin();
-    //regButtonWin
     $('.register-buttons > li.button').each(function() {
       if ($(this)[0].dataset.reg === note[1]) {
         $(this).css({ color: '#fafafa', backgroundColor: 'steelblue' });

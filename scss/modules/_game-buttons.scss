@@ -13,12 +13,24 @@
   }
 }
 
+.register-container {
+  margin-top: 4rem;
+
+  @include atSmall {
+    margin-top: 2rem;
+  }
+
+  @include atMedium {
+    margin-top: 0;
+  }
+}
+
 .note-buttons,
 .register-buttons {
   display: flex;
   padding: 0;
   justify-content: space-between;
-  width: 355px;
+  width: 310px;
 
   @include atSmall {
     width: 480px;
@@ -37,11 +49,11 @@
 .register-buttons > li {
   border: 1px solid #777;
   border-radius: 12%;
-  height: 4.2rem;
-  width: 4.2rem;
+  height: 3.7rem;
+  width: 3.7rem;
   text-align: center;
-  line-height: 4.2rem;
-  font-size: 165%;
+  line-height: 3.8rem;
+  font-size: 155%;
   // margin: 4rem .5rem 5rem .5rem;
 
   &.correct {

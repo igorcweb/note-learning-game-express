@@ -19,7 +19,10 @@ ul.clef {
   z-index: 10;
 
   &.isShowing {
-    margin-left: 0;
+    margin-left: -1rem;
+    @include atSmall {
+      margin-left: 0;
+    }
   }
 
   &.selected {
@@ -71,8 +74,7 @@ ul.clef {
   }
 }
 
-.button__info,
-.button__back {
+.button__info {
   margin-left: -40rem;
   display: block;
   position: absolute;
@@ -83,9 +85,9 @@ ul.clef {
   text-align: center;
   background-color: rgba(180, 191, 191, 0.9);
   font-size: 90%;
-  width: 7.8rem;
+  width: 8.2rem;
   letter-spacing: 1px;
-  line-height: 1.7rem;
+  line-height: 2.2rem;
   z-index: 10;
 
   &.isShowing {
@@ -106,6 +108,7 @@ ul.clef {
   }
 
   @include atMedium {
+    line-height: 1.7rem;
     margin-left: 0 !important;
     font-size: 100%;
     width: 11rem;
@@ -121,27 +124,27 @@ ul.clef {
 }
 
 .button__back {
+  position: absolute;
+  left: 4%;
+  top: 0.6rem;
+  font-size: 80%;
   font-weight: 300;
   display: block;
-  width: 13rem;
+  width: 12.5rem;
   background: steelblue;
   border: 2px solid rgba(180, 191, 191, 0.9);
   letter-spacing: 1px;
-  padding-bottom: 2px;
-  left: 6%;
-  top: 0.4rem;
-  margin: 0;
+  padding: 2px 0;
 
   @include atSmall {
     font-size: 90%;
-    width: 13rem;
-    left: 4%;
-    top: 0.8rem;
+    width: 14rem;
+    top: 0.6rem;
   }
   @include atMedium {
+    top: 0.8rem;
     font-size: 100%;
-    width: 10rem;
-    top: 0.6rem;
+    width: 15rem;
     padding-top: 3px;
   }
 }
@@ -155,7 +158,7 @@ ul.clef {
   letter-spacing: 1px;
   padding: 2px 0;
   width: 10rem;
-  top: 4rem;
+  top: 4.5rem;
   right: 6%;
   a {
     text-decoration: none;
@@ -166,15 +169,15 @@ ul.clef {
     font-size: 90%;
     width: 10rem;
     right: 4%;
-    top: 0.8rem;
+    top: 0.6rem;
   }
   @include atMedium {
     right: 4%;
-    top: 0.6rem;
+    top: 0.9rem;
     line-height: 1rem;
-    padding-top: 3px;
+    padding: 7px 0 6px 0;
     font-size: 100%;
-    width: 7.2rem;
+    width: 11rem;
   }
 }
 

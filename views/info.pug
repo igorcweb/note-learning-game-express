@@ -1,3 +1,64 @@
 extends layout
 block content
-  p hello from info
+  div
+    header.info.header
+      div
+        a.button.button__back.link(href='/') Back to the Game
+      h1.title Learn How to Read Music
+      div
+      .button.button__email
+        a(href='mailto:notelearninggame@gmail.com?subject=Note-Learning Game') Get in Touch
+    .info-wrapper
+      article
+        h1 Notes
+        p
+          | The entire musical alphabet is represented by only seven letters: A, B, C, D, E, F, G. Modern music notation uses the
+          | staff of five lines. The notes are placed on the lines as well as on the spaces between the lines. A pattern of consecutive
+          | notes will always consist of alternating lines and spaces. The best way to remember the position of each note on the
+          | staff is to learn which ones are on the spaces and which ones are on the lines.
+        img.treble-staff(src='/images/treble-staff.png', alt='treble-staff')
+        img.bass-staff(src='/images/bass-staff.png', alt='bass-staff')
+        p
+          | Let us first look at the treble clef which is used for the notes in the upper register. The notes on the spaces are F, A,
+          | C, E. The notes on the lines are E, G, B, D, F. You will notice that space-notes are skipping over the lines, and the
+          | line-notes are skipping over the spaces, so if you include the missing lines and spaces in each pattern, you will end
+          | up with 
+          strong F
+          | , g, 
+          strong A
+          | , b, 
+          strong C
+          | , d, 
+          strong E
+          |  and 
+          strong E
+          | ,
+          | 				f, 
+          strong G
+          | , a, 
+          strong B
+          | , c, 
+          strong D
+          | , e, 
+          strong F
+          | .
+        p
+          | You can follow the same pattern to the bass cleff which is used for the notes in the lower register. The space-notes
+          | are A, C, E, G. The line-notes are G, B, D, F, A.
+        p
+          | The ledger lines are used to notate the notes outside of the staff.  The lines are added as needed, following the same space-line or line-space pattern as the notes within the staff.
+        img.ledger-treble(src='/images/ledger-treble.png', alt='ledger-treble')
+        img.ledger-bass(src='/images/ledger-bass.png', alt='ledger-bass')
+        p
+          | The notes on the piano keyboard are recognized by the recurring patterns of two and three black keys. To find C, D, E, look for the two black keys. To find F, G, A, B, look for the three black keys.
+        img.note-names(src='/images/notenames.png', alt='note-names')
+        h1 Registers
+        p
+          | In order to determine which note corresponds with a particular pitch, it is not enought to just now the letter name. You also have to know which octave register it belongs to.
+          | There are seven full registers in modern music notation.  Each registars starts with C.  All of the notes between C1 and C2 are in the first register. The same pattern is applied the rest of the registers.
+          | In the examples bellow, you can see what it looks like on the piano keyboard as well as on the staff.  8va (octava) bellow the staff is used to notate the notes that are one octave bellow.  8va and 15ma (quindicesima) above the staff
+          | are used to notate the notes that are one and two octaves above.
+        img.keyboard-registers(src='/images/keyboard-registers.jpg', alt='keyboard-registers')
+        img.staff-registers(src='/images/staff-registers.jpeg', alt='staff-registers')
+
+

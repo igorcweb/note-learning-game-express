@@ -10,12 +10,18 @@
 }
 
 .octave {
+  position: relative;
+  left: 2px;
   display: block;
   display: flex;
   margin: 0 auto;
   width: 20rem;
   cursor: pointer;
   z-index: 2;
+
+  @include atSmall {
+    left: -7px;
+  }
 
   @include atMedium {
     display: none;
@@ -27,7 +33,6 @@
   padding: 0;
   list-style: none;
   position: relative;
-  // float: left;
   cursor: pointer;
 }
 

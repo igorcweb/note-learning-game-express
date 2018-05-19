@@ -70,24 +70,29 @@ div.warning-message {
   }
 }
 
+// div.game {
+//   display: flex;
+//   flex-direction: column;
+// }
 .footer {
   display: block;
   font-size: 65%;
   font-size: 65%;
   color: #888;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
 
   @include atSmall {
     font-size: 70%;
+    margin-top: 2rem;
   }
 
   @include atMedium {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     font-size: 75%;
   }
 
   @include atLarge {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
