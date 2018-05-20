@@ -75,7 +75,6 @@ ul.clef {
 }
 
 .button__info {
-  color: #fafafa;
   margin-left: -40rem;
   display: block;
   position: absolute;
@@ -109,11 +108,10 @@ ul.clef {
   }
 
   @include atMedium {
-    line-height: 1.7rem;
     margin-left: 0 !important;
-    font-size: 100%;
+    font-size: 105%;
     font-weight: normal;
-    width: 10.5rem;
+    width: 10.7rem;
     letter-spacing: 2px;
     padding-top: 0.4rem;
   }
@@ -187,7 +185,7 @@ ul.clef {
 }
 
 .button__back.link {
-  color: #fafafa;
+  color: #fafafa !important;
 }
 
 .link {
