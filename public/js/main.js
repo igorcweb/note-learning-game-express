@@ -364,7 +364,7 @@
     } else {
       score = 0;
       $('.task4')
-        .text('Try Again!')
+        .text(`Try Again!`)
         .css('color', '#e9ebee');
       setTimeout(function() {
         $('.task4').css('color', '#333');
