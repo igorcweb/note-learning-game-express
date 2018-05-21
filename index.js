@@ -16,6 +16,6 @@ app.get('/info', (req, res) => {
   res.render('info');
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`NOTE-GAME IS RUNNING ON localhost:${port}`);
 });
