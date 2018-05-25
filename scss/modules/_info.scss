@@ -12,9 +12,9 @@ header.info {
     left: 8rem;
 
     @include atSmall {
-      font-size: 125%;
+      font-size: 120%;
       position: relative;
-      left: 2rem;
+      left: 14.5rem;
     }
 
     @include atMedium {

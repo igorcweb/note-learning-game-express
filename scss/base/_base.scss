@@ -27,13 +27,6 @@ h2 {
   border-radius: 15%;
   transition: 0.2s ease-out;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-  &.was-clicked {
-    background: $bgcolor;
-    border: none;
-    box-shadow: none;
-    color: $bgcolor;
-  }
 }
 
 @include atSmall {
@@ -83,15 +76,10 @@ div.warning-message {
   margin-top: 0.4rem;
   display: block;
   font-size: 65%;
-  font-size: 65%;
   color: #888;
   text-align: center;
 
   @include atSmall {
-    font-size: 70%;
-  }
-
-  @include atMedium {
     font-size: 70%;
   }
 }

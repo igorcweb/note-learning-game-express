@@ -22,18 +22,12 @@
   padding: 0;
   justify-content: space-between;
   width: 310px;
-
   @include atSmall {
     width: 480px;
   }
   @include atMedium {
     width: 570px;
   }
-}
-
-.correctButton {
-  color: 'fafafa';
-  background-color: steelblue;
 }
 
 .note-buttons > li,

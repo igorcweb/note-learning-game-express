@@ -6,13 +6,6 @@ $bgbutton: rgba(180, 191, 191, 0.9);
 
 $color: #444;
 
-//Sizes
-$s-size: 1.2rem;
-$m-size: 1.6rem;
-$l-size: 3.2rem;
-$xl-size: 4.8rem;
-$desktop-breakpoint: 45rem;
-
 //Mixins
 @mixin atSmall() {
   @media (min-width: 530px) {
