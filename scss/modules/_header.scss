@@ -18,9 +18,8 @@
     position: absolute;
     margin: 0;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     font-size: 140%;
-    z-index: 10;
   }
 
   @include atMedium {
