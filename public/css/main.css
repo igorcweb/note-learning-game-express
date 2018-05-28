@@ -195,7 +195,7 @@ ul.clef {
 
 .button__mode {
   margin-left: -20rem;
-  transition: transform 0.2s ease-out margin 0.3s ease-out;
+  transition: 0.2s ease-out;
   position: relative;
   border: 1px solid #777;
   background-color: rgba(180, 191, 191, 0.9);
@@ -258,6 +258,7 @@ ul.clef {
   top: 4.6rem;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.2s ease-out;
   border: 1px solid #777;
   text-align: center;
   background-color: rgba(180, 191, 191, 0.9);
