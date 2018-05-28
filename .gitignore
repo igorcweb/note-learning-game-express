@@ -4,7 +4,3 @@
 # misc
 .DS_Store
 yarn.lock
-
-
-# automatically generated css file
-public/css/main.css
