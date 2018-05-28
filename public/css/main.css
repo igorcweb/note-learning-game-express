@@ -513,7 +513,7 @@ ul.clef {
 
 .octave {
   position: relative;
-  left: 2px;
+  left: 12px;
   display: block;
   display: flex;
   margin: 0 auto;
@@ -522,7 +522,7 @@ ul.clef {
   z-index: 2; }
   @media (min-width: 530px) {
     .octave {
-      left: -7px; } }
+      position: static; } }
   @media (min-width: 800px) {
     .octave {
       display: none; } }

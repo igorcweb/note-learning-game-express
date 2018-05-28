@@ -12,7 +12,7 @@
 
 .octave {
   position: relative;
-  left: 2px;
+  left: 12px;
   display: block;
   display: flex;
   margin: 0 auto;
@@ -21,7 +21,7 @@
   z-index: 2;
 
   @include atSmall {
-    left: -7px;
+    position: static;
   }
 
   @include atMedium {
