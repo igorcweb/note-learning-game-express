@@ -5,7 +5,7 @@ ul.clef {
 
 .button__mode {
   margin-left: -20rem;
-  transition: margin-left 0.3s;
+  transition: transform 0.2s ease-out margin 0.3s ease-out;
   position: relative;
   border: 1px solid #777;
   background-color: $bgbutton;
