@@ -8,14 +8,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.get('/', (req, res) => res.render('index'));
 
-app.get('/info', (req, res) => {
-  res.render('info');
-});
+app.get('/info', (req, res) => res.render('info'));
 
-app.listen(process.env.PORT || port, () => {
-  console.log(`NOTE-GAME IS RUNNING ON localhost:${port}`);
-});
+app.listen(process.env.PORT || port, () =>
+  console.log(`NOTE-GAME IS RUNNING ON localhost:${port}`)
+);
