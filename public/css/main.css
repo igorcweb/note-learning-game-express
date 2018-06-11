@@ -652,6 +652,7 @@ header.info h1.title {
       font-size: 170%; } }
 
 article {
+  line-height: 2.2rem;
   margin: 0 3%;
   letter-spacing: 0.5px;
   font-size: 105%; }
