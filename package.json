@@ -5,9 +5,10 @@
   "author": "Igor Chernyshev",
   "license": "MIT",
   "scripts": {
-    "start-server": "nodemon index.js --exec babel-node --presets env",
+    "start": "babel-node index.js",
+    "watch-server": "nodemon index.js --exec babel-node --presets env",
     "build-css": "node-sass -o public/css scss/main.scss -w",
-    "start": "npm-run-all -p build-css start-server"
+    "watch": "npm-run-all -p build-css watch-server"
   },
   "dependencies": {
     "express": "^4.16.3",
